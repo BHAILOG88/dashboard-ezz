@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Browser Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .search-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      
+      
+    }
+    
+    .search-input {
+      width: 400px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    
+    .search-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .button-container a {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      background-color: #007bff;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    
+    
+    body {
+      background-image:url('./background6\ \(1\).jpg');
+      background-size:cover;
+      height:100vh;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin:0;
+      padding:0;
+      align-items: center;
+      display:flex;
+      justify-content:center;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+  
+  <div class="search-container">
+    <input id="search-input" class="search-input" type="text" placeholder="Search on Google">
+    <button id="search-button" class="search-button">Search</button>
+  </div>
+  
+  <div class="button-container">
+    <a href="#" onclick="openWebsite('https://www.chatgpt.com')">ChatGPT</a>
+    <a href="#" onclick="openWebsite('https://twitter.com')">Twitter</a>
+    <a href="#" onclick="openWebsite('https://replit.com')">Replit</a>
+    <a href="#" onclick="openWebsite('https://www.youtube.com')">YouTube</a>
+    <a href="#" onclick="openWebsite('https://discord.com')">Discord</a>
+    <a href="#" onclick="openWebsite('https://www.amazon.com')">Amazon</a>
+    <a href="#" onclick="openWebsite('https://www.jiocinema.com')">JioCinema</a>
+  </div>
+   
+  </div>
+  
+  
+  
+  
+  <script>
+    // JavaScript code here
+    const searchButton = document.getElementById('search-button');
+    const searchInput = document.getElementById('search-input');
+    
+    searchButton.addEventListener('click', () => {
+      const query = searchInput.value;
+      if (query) {
+        const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+        window.open(searchUrl, '_blank');
+      }
+    });
+    
+    function openWebsite(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
